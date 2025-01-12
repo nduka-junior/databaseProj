@@ -23,6 +23,7 @@ export async function createSupabaseClient() {
 
   if (accessToken && refreshToken) {
     // Use the setSession method with the required tokens
+    // redeploy
     await supabase.auth.setSession({
       access_token: accessToken.value,
       refresh_token: refreshToken.value,
